@@ -1,0 +1,19 @@
+{
+  "name": "ws-rest-pt",
+  "version": "1.0.0",
+  "description": "rest api ws",
+  "main": "server.js",
+  "author": "amal lahmar",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
