@@ -45,7 +45,7 @@ export const updateContact = (id, updatedContact) => async (dispatch) => {
       `http://localhost:5500/api/contact/updateContact/${id}`,
       updatedContact
     );
-    dispatch(getOneContact(id));
+    dispatch(getAllContacts());
     // dispatch({ type: UPDATE_CONTACT, payload: res.data }); // res.data = updatedContact
   } catch (err) {
     dispatch({ type: ERROR });

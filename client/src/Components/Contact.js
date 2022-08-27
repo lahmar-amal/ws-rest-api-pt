@@ -26,9 +26,11 @@ const useStyles = makeStyles({
     justifyContent: "space-around",
   },
 });
-const Contact = ({ contact }) => {
+const Contact = ({ contact, onUpdate }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  // console.log(contact);
+  const handleUpdate = () => onUpdate(contact);
   return (
     <Card className={classes.root}>
       <CardContent>
@@ -48,13 +50,15 @@ const Contact = ({ contact }) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
+        <Button size="small" onClick={handleUpdate}>
+          Edit
+        </Button>
         <Button
           size="small"
           onClick={() => dispatch(deleteContact(contact._id))}
         >
           Delete
         </Button>
-        <Button size="small">Update</Button>
         <Button
           size="small"
           onClick={() => dispatch(getOneContact(contact._id))}

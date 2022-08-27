@@ -8,9 +8,6 @@ const NavBar = () => {
       <Grid item>
         <Link to="/"> Home</Link>
       </Grid>
-      <Grid item>
-        <Link to="/addUpdate"> Add Contact</Link>
-      </Grid>
     </Grid>
   );
 };
